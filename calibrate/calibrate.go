@@ -11,8 +11,8 @@ import (
 
 	"github.com/go-chi/chi"
 	"github.com/go-chi/chi/middleware"
-	"github.com/goware/cors"
-	"github.com/murdinc/ELMFlash/hexstuff"
+	"github.com/go-chi/cors"
+	"github.com/alexdixon41/ELMFlash/hexstuff"
 	"github.com/toqueteos/webbrowser"
 )
 

@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/murdinc/ELMFlash/calibrate"
-	"github.com/murdinc/ELMFlash/compare"
-	"github.com/murdinc/ELMFlash/disasm"
-	"github.com/murdinc/ELMFlash/hexstuff"
-	"github.com/murdinc/ELMFlash/iso9141"
-	"github.com/murdinc/ELMFlash/j3"
+	"github.com/alexdixon41/ELMFlash/calibrate"
+	"github.com/alexdixon41/ELMFlash/compare"
+	"github.com/alexdixon41/ELMFlash/disasm"
+	"github.com/alexdixon41/ELMFlash/hexstuff"
+	"github.com/alexdixon41/ELMFlash/iso9141"
+	"github.com/alexdixon41/ELMFlash/j3"
 	"github.com/murdinc/legacy-cli"
 )
 
