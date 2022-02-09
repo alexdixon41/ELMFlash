@@ -892,7 +892,7 @@ func (d *Device) FindDevice() bool {
 
 	// Look for what is mostly likely the Arduino device
 	for _, f := range contents {
-		if strings.Contains(f.Name(), "STY3M") && strings.Contains(f.Name(), "tty") {
+		if strings.Contains(strings.Contains(f.Name(), "ttyUSB0") {
 			d.location = "/dev/" + f.Name()
 			d.baud = baud
 			dbg("Found Device: "+d.location, nil)
