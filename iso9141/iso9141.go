@@ -754,6 +754,8 @@ func (d *Device) Msg(msg []byte) (Packet, error) {
 		return resp, resp.Error
 	}
 
+	dbg("Raw message: " + resp.Message)
+
 	// Organize
 	hex := toHex(resp.Message)
 	resp.Header = hex[0:3]
