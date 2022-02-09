@@ -757,19 +757,19 @@ func (d *Device) Msg(msg []byte) (Packet, error) {
 	dbg("Raw message: " + string(resp.Message[:]), nil)
 
 	// Organize
-	hex := toHex(resp.Message)
-	resp.Header = hex[0:3]
-	length := int(hex[0]>>4) + 1
-	resp.unPack(hex[length:])
-	resp.Message = hex[3:length]
-	resp.Checksum = hex[(len(hex) - 1)]
+	//hex := toHex(resp.Message)
+	//resp.Header = hex[0:3]
+	//length := int(hex[0]>>4) + 1
+	//resp.unPack(hex[length:])
+	//resp.Message = hex[3:length]
+	//resp.Checksum = hex[(len(hex) - 1)]
 
 	// Detect errors
-	errCode := hex[(len(hex) - 2)]
-	if resp.Message[0] == errResp && errCode != 0x00 {
-		resp.Error = errors.New("Recieved error from ECU: " + errCodes[errCode])
-		resp.ErrCode = errCode
-	}
+	//errCode := hex[(len(hex) - 2)]
+	//if resp.Message[0] == errResp && errCode != 0x00 {
+	//	resp.Error = errors.New("Recieved error from ECU: " + errCodes[errCode])
+	//	resp.ErrCode = errCode
+	//}
 
 	return resp, resp.Error
 }
