@@ -18,8 +18,8 @@ import (
 
 // App constants
 ////////////////..........
-const baud = 115200
-const debug = false
+const baud = 38400
+const debug = true
 const obdDevice = "STY3M"
 const EOL = 0x3E
 const testerAddr = 0xF5
@@ -875,7 +875,7 @@ func (d *Device) ConnectDevice() {
 	// AT AL - Allow Long Messages
 
 	// Run set of commands to properly setup our communication with the car
-	commands := []string{"AT D", "AT E0", "AT S0", "AT SP 3", "AT H1", "AT L0", "AT AL", "AT SI", "AT CAF0", "AT AT1"}
+	commands := []string{"AT D", "AT E0", "AT S0", "AT SP 00", "AT H1", "AT L1", "AT AL", "AT CAF0", "AT AT1"}
 	for _, c := range commands {
 		pkt := Packet{Message: []byte(c)}
 		resp := d.Send(pkt)
