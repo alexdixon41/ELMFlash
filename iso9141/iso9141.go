@@ -754,7 +754,7 @@ func (d *Device) Msg(msg []byte) (Packet, error) {
 		return resp, resp.Error
 	}
 
-	dbg("Raw message: " + resp.Message)
+	dbg("Raw message: " + resp.Message, nil)
 
 	// Organize
 	hex := toHex(resp.Message)
