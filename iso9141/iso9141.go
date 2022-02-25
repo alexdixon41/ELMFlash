@@ -6,14 +6,14 @@ import (
 	"errors"
 	"fmt"
 	"io"
-	"io/ioutil"
+//	"io/ioutil"
 	"math/rand"
 	"os"
 	"strings"
 	"time"
 
 	"github.com/cheggaaa/pb"
-	serial "github.com/huin/goserial"
+	serial "github.com/alexdixon41/goserial"
 )
 
 // App constants
@@ -901,9 +901,9 @@ func (d *Device) FindDevice() bool {
 	//		return true
 	//	}
 	//}
-	d.location = "COM3"
+	d.location = "COM7"
 	d.baud = baud
-	dbg("Set d.location to COM3 Woweee!", nil)
+	dbg("Set d.location to COM7 Woweee!", nil)
 	return true
 }
 

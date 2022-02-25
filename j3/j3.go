@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/tarm/serial"
+	serial "github.com/alexdixon41/goserial"
 )
 
 //var led uint8 = 13
