@@ -890,18 +890,21 @@ func (d *Device) ConnectDevice() {
 }
 
 func (d *Device) FindDevice() bool {
-	contents, _ := ioutil.ReadDir("/dev")
+	//contents, _ := ioutil.ReadDir("/dev")
 
 	// Look for what is mostly likely the Arduino device
-	for _, f := range contents {
-		if strings.Contains(f.Name(), "ttyUSB0") {
-			d.location = "/dev/" + f.Name()
-			d.baud = baud
-			dbg("Found Device: "+d.location, nil)
-			return true
-		}
-	}
-	return false
+	//for _, f := range contents {
+	//	if strings.Contains(f.Name(), "ttyUSB0") {
+	//		d.location = "/dev/" + f.Name()
+	//		d.baud = baud
+	//		dbg("Found Device: "+d.location, nil)
+	//		return true
+	//	}
+	//}
+	d.location = "COM3"
+	d.baud = baud
+	dbg("Set d.location to COM3 Woweee!", nil)
+	return true
 }
 
 func (d *Device) DisconnectDevice() {
